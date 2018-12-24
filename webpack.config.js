@@ -45,6 +45,18 @@ module.exports = {
             filename: "./index.html"
         })],
     devServer: {
-        contentBase: './dist'
+        contentBase: './dist',
+        before: function(app,server){
+            app.get('/numbers', function(req,res){
+                let valorPage = req.param('page')
+                let valorPerPage = req.param('perPage')
+                res.json({
+                    "meta":{
+                        "page":valorPage,
+                        "perPage": valorPerPage
+                    }
+                })
+            })
+        }
     }
 }
