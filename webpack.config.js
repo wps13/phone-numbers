@@ -46,15 +46,26 @@ module.exports = {
         })],
     devServer: {
         contentBase: './dist',
-        before: function(app,server){
-            app.get('/numbers', function(req,res){
+        before: function (app, server) {
+            app.get('/numbers', function (req, res) {
+
                 let valorPage = req.param('page')
                 let valorPerPage = req.param('perPage')
+
+                generateNumbers = (valorPage, valorPerPage) => {
+                    let numbersArray = []
+
+                    return numbersArray
+                }
+
+                let generatedNumbers = generateNumbers(valorPage, valorPerPage)
+
                 res.json({
-                    "meta":{
-                        "page":valorPage,
+                    "meta": {
+                        "page": valorPage,
                         "perPage": valorPerPage
-                    }
+                    },
+                    "data": generatedNumbers
                 })
             })
         }
