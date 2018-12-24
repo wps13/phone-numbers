@@ -46,6 +46,7 @@ module.exports = {
         })],
     devServer: {
         contentBase: './dist',
+        watchContentBase:true,
         before: function (app, server) {
             app.get('/numbers', function (req, res) {
 
