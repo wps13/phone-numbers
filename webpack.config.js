@@ -50,9 +50,11 @@ module.exports = {
         before: function (app, server) {
             app.get('/numbers', function (req, res) {
 
-                let valorPage = req.param('page')
-                let valorPerPage = req.param('perPage')
-                let totalPages = Math.round(1000/valorPerPage)
+                let page = req.param('page')
+                let items = req.param('perPage')
+                let valorPage = (page === undefined ? 1 : page)
+                let valorPerPage = (items === undefined ? 100 : items)
+                let totalPages = Math.ceil((1000/valorPerPage))
                 generateNumbers = (valorPage, valorPerPage) => {
                     let pageValue = valorPage
                     let perPageValue = valorPerPage
