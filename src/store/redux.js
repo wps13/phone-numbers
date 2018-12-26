@@ -6,7 +6,7 @@ const initialState = {
 }
 
 //reducer
-export default function reducer(state = initialState, action) {
+export function reducer(state = initialState, action) {
     switch (action.type) {
         case "GET_NUMBERS_REQUEST":
             return {
