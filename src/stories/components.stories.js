@@ -3,6 +3,7 @@ import { storiesOf } from "@storybook/react";
 
 import NumberCard from "../components/NumberCard";
 import DataInput from "../components/DataInput";
+import GetNumbersButton from "../components/GetNumbersButton";
 
 storiesOf("Components", module)
   .add("Number card", () => <NumberCard number={555000013} cost={1.13} />)
@@ -19,6 +20,13 @@ storiesOf("Components", module)
       text="Numbers Per Page"
       change={e => {
         console.log(e.target.value);
+      }}
+    />
+  ))
+  .add("Get numbers", () => (
+    <GetNumbersButton
+      action={() => {
+        console.log("clicked");
       }}
     />
   ));
