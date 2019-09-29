@@ -1,0 +1,16 @@
+.getNumbers {
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+  border: 1px solid #97aac9;
+  border-radius: 5px;
+  width: 200px;
+  font-weight: bold;
+}
+
+.getNumbers:hover {
+  background-color: #97aac9;
+  color: #fff;
+  transition: 400ms ease-in-out;
+  cursor: pointer;
+}
