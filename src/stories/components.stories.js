@@ -4,6 +4,8 @@ import { storiesOf } from "@storybook/react";
 import NumberCard from "../components/NumberCard";
 import DataInput from "../components/DataInput";
 import GetNumbersButton from "../components/GetNumbersButton";
+import PaginationItem from "../components/PaginationItem";
+import Pagination from "../components/Pagination";
 
 storiesOf("Components", module)
   .add("Number card", () => <NumberCard number={555000013} cost={1.13} />)
@@ -29,4 +31,8 @@ storiesOf("Components", module)
         console.log("clicked");
       }}
     />
-  ));
+  ))
+  .add("Page Number", () => <PaginationItem text={1} type="number" />)
+  .add("Next Page", () => <PaginationItem text="Next" type="text" />)
+  .add("Previous Page", () => <PaginationItem text="Previous" type="text" />)
+  .add("Pagination", () => <Pagination />);
