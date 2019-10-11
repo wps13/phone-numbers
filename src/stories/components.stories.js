@@ -35,4 +35,4 @@ storiesOf("Components", module)
   .add("Page Number", () => <PaginationItem text={1} type="number" />)
   .add("Next Page", () => <PaginationItem text="Next" type="text" />)
   .add("Previous Page", () => <PaginationItem text="Previous" type="text" />)
-  .add("Pagination", () => <Pagination />);
+  .add("Pagination", () => <Pagination length={5} />);
