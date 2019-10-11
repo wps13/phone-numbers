@@ -10,8 +10,15 @@
 
 .pagination-item.number {
   width: 40px;
+  display: none;
 }
 
 .pagination-item.text {
   width: 80px;
+}
+
+@media (min-width: 768px) {
+  .pagination-item.number {
+    display: inline-block;
+  }
 }
