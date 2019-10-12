@@ -1,0 +1,22 @@
+.initial-page {
+  display: flex;
+  width: 100%;
+  height: ;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.initial-page__inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10% 0;
+}
+
+@media (min-width: 768px) {
+  .initial-page__inputs {
+    flex-direction: row;
+    margin: 5%;
+  }
+}
