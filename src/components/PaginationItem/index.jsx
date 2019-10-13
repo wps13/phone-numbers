@@ -4,7 +4,7 @@ import "./style.css";
 
 const PaginationItem = ({ text, type }) => {
   return (
-    <div className={"pagination-item " + type}>
+    <div className={"pagination-item " + type} data-testid="pagination-item">
       <p>{text}</p>
     </div>
   );
