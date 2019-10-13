@@ -8,7 +8,7 @@ import "./style.css";
 const NumberPage = ({ data }) => {
   return (
     <div className="number-page">
-      <h1>Avaliable lines</h1>
+      <h1>Available lines</h1>
       {data.map(line => (
         <NumberCard number={line.number} cost={line.cost} key={line.cost} />
       ))}
