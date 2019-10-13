@@ -4,7 +4,7 @@ import "./style.css";
 
 const GetNumbersButton = ({ action }) => {
   return (
-    <div className="getNumbers" onClick={() => action()}>
+    <div data-testid="button" className="getNumbers" onClick={() => action()}>
       <p>Get Numbers</p>
     </div>
   );
