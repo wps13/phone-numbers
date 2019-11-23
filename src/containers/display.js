@@ -1,33 +1,45 @@
-import React, { Component } from 'react'
-import style from './style.css'
+import React, { Component } from "react";
+import { connect } from "react-redux";
 
-import { connect } from 'react-redux'
-import  { bindActionCreators } from 'redux'
-import { reducer } from '../store/redux'
+import { creators } from "../store/redux";
+import InitialPage from "../components/InitialPage";
+
+const { getNumbersRequest } = creators;
 
 class Display extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { page: 0, amount: 0 };
+    this.handleChange = this.handleChange.bind(this);
+    this.requestNumbers = this.requestNumbers.bind(this);
+  }
 
-    componentDidMount(){
-        this.props.getNumbersRequest() 
-    }
+  handleChange(name, value) {
+    this.setState({ [name]: value });
+  }
+  requestNumbers() {
+    const { page, amount } = this.state;
+    const { getNumbers } = this.props;
 
-    render() {
-        return (
-            <div className={style.buttonDiv}>
-                <button>
-                    Previous Page
-                </button>
-                <button>
-                    Next Page
-                </button>
-            </div>
-        )
-    }
+    getNumbers(Number(page), Number(amount));
+  }
+
+  render() {
+    return (
+      <InitialPage
+        change={this.handleChange}
+        requestNumbers={this.requestNumbers}
+      />
+    );
+  }
 }
 const mapStateToProps = state => ({
-    numbers: state.generatedData
-})
+  numbers: state.generatedData,
+  totalPages: state.totalPages
+});
 
-const mapDispatchToProps = dispatch => bindActionCreators(reducer,dispatch)
+const mapDispatchToProps = dispatch => ({
+  getNumbers: (page, amount) => dispatch(getNumbersRequest(page, amount))
+});
 
-export default connect(mapStateToProps,mapDispatchToProps)(Display)
+export default connect(mapStateToProps, mapDispatchToProps)(Display);
