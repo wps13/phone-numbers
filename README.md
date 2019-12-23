@@ -1,8 +1,10 @@
-## Teste para front-end dev
+## Phone numbers generator
 
-Teste para desenvolver(a) front-end na Evolux.
+Gerador de telefones com custo incluído.
 
 [Descrição do teste](https://github.com/EvoluxBR/front-end-test)
+
+### O que foi feito
 
 ### Tecnologias Usadas
 
