@@ -6,6 +6,8 @@ Gerador de telefones com custo incluído.
 
 ### O que foi feito
 
+![](https://github.com/wps13/phone-numbers/blob/master/public/working.gif)
+
 ### Tecnologias Usadas
 
 - RectJS
