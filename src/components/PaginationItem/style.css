@@ -14,7 +14,7 @@
 }
 
 .pagination-item.text {
-  width: 80px;
+  min-width: 80px;
 }
 
 @media (min-width: 768px) {
