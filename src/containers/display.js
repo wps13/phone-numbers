@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 
 import { creators } from "../store/redux";
 import InitialPage from "../components/InitialPage";
+import NumberPage from "../components/NumberPage";
 
 const { getNumbersRequest } = creators;
 
@@ -25,11 +26,18 @@ class Display extends Component {
   }
 
   render() {
+    const { numbers } = this.props;
     return (
-      <InitialPage
-        change={this.handleChange}
-        requestNumbers={this.requestNumbers}
-      />
+      <>
+        {numbers.length ? (
+          <NumberPage data={numbers} />
+        ) : (
+          <InitialPage
+            change={this.handleChange}
+            requestNumbers={this.requestNumbers}
+          />
+        )}
+      </>
     );
   }
 }
