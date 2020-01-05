@@ -1,5 +1,7 @@
 ## Phone numbers generator
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/wps13/phone-numbers.svg)](https://greenkeeper.io/)
+
 Gerador de telefones com custo incluído.
 
 [Descrição do teste](https://github.com/EvoluxBR/front-end-test)
