@@ -1,12 +1,14 @@
 ## Phone numbers generator
 
-Gerador de telefones com custo incluído.
+Aplicação web que gera números de telefone e o custo da linha, mostrando os números que estão disponíveis para compra.
 
-[Descrição do teste](https://github.com/EvoluxBR/front-end-test)
+Considera-se que na api tenham-se 1000 números disponíveis, entre `555 000 000` e `555 000 999`, sendo os preços variando entre `$1.00` e `$1.99` onde calcula-se com base nos dois últimos digitos da linha.
+
 
 ### O que foi feito
 
 ![](https://github.com/wps13/phone-numbers/blob/master/public/working.gif)
+
 
 ### Tecnologias Usadas
 
@@ -51,4 +53,10 @@ retornando o seguinte resultado:
 }
 ```
 
-onde é mostrado a página que está sendo acessada, quantos itens serão retornados por página e o totatl de páginas na chave meta, já em data é retornado o número e o custo dele.
+onde é mostrado a página que está sendo acessada, quantos itens serão retornados por página e o total de páginas na chave meta, já em data é retornado o número e o custo dele.
+
+### A ser feito
+
+- [ ] Paginação
+
+- [ ] Melhorias no layout
